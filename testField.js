@@ -63,3 +63,15 @@ let twoSumSecond = (arr, target) => {
     }
     return []
 }
+
+
+let linearSearch = (arr, nums) => {
+
+    for (let i = 0; i < arr.length; i++) {
+        if (nums === arr[i]) {
+            return i 
+        }
+    }
+    return -1
+}
+
