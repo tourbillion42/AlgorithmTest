@@ -13,6 +13,7 @@ var two = [11, 2, 14, 7]
 // output: PAHNAPLSIIGYIR
 
 
+// ZigZag
 let zigZag = (s, numRows) => {
     
     if (numRows == 1 || numRows > s.length) {
@@ -34,7 +35,7 @@ let zigZag = (s, numRows) => {
     return rows.join('')
 }
 
-
+// TwoSumFirst
 function twoSumOne(arr, target) {
     let map = {}
 
@@ -49,7 +50,7 @@ function twoSumOne(arr, target) {
     return null 
 }
 
-
+// TwoSumSecond
 let twoSumSecond = (arr, target) => {
     let hash = new Map() 
 
@@ -64,7 +65,7 @@ let twoSumSecond = (arr, target) => {
     return []
 }
 
-
+// LinearSearch
 let linearSearch = (arr, nums) => {
 
     for (let i = 0; i < arr.length; i++) {
