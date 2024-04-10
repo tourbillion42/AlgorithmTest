@@ -95,3 +95,17 @@ function binearSearch(arr, nums) {
     return nums === arr[mid] ? mid : -1
 }
 
+// two arrays are equal
+let same = (ar1, ar2) => {
+
+    for (let i = 0; i < ar1.length; i++) {
+        let correctIdx = ar2.indexOf(ar1[i] ** 2) 
+
+        if (correctIdx === -1) {
+            return false
+        }
+        ar2.splice(correctIdx, 1)
+    }
+    return true
+}
+
