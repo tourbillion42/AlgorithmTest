@@ -11,7 +11,26 @@ var two = [11, 2, 14, 7]
 // linear search 선형 검색 , 순차 검색
 // binary search 이진 검색 , 이분 검색 - 반으로 나누어서 연산 
 // output: PAHNAPLSIIGYIR
-// binary search 이진 검색 , 이분 검색 - 반으로 나누어서 연산 
-// output: PAHNAPLSIIGYIR
 
+
+let zigZag = (s, numRows) => {
+    
+    if (numRows == 1 || numRows > s.length) {
+        return s 
+    }
+
+    var rows = Array(numRows).fill('')
+    var index = 0 
+    var canGoDown = false 
+
+    for (let i = 0; i < s.length; i++) {
+        rows[index] += s[i]
+
+        if (index == 0 || index == numRows - 1) {
+            canGoDown = !canGoDown
+        }
+        canGoDown ? index += 1 : index -= 1 
+    }
+    return rows.join('')
+}
 
