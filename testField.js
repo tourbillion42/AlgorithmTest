@@ -34,3 +34,19 @@ let zigZag = (s, numRows) => {
     return rows.join('')
 }
 
+
+function twoSumOne(arr, target) {
+    let map = {}
+
+    for (let i = 0; i < arr.length; i++) {
+        let complement = target - arr[i]
+
+        if (complement in map) {
+            return [map[complement], i]
+        }
+        map[arr[i]] = i 
+    }
+    return null 
+}
+
+console.log(twoSumOne(two, 9));
