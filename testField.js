@@ -76,3 +76,22 @@ let linearSearch = (arr, nums) => {
     return -1
 }
 
+// BinearSearch 
+function binearSearch(arr, nums) {
+
+    let start = 0 
+    let end = arr.length - 1 
+    let mid = Math.floor((start + end) / 2)
+    
+    while (nums !== arr[mid] && start <= end) {
+        if (nums < arr[mid]) {
+            end = mid - 1
+        }
+        else {
+            start = mid + 1 
+        }
+        mid = Math.floor((start + end) / 2)
+    }
+    return nums === arr[mid] ? mid : -1
+}
+
