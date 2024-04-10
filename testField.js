@@ -49,4 +49,17 @@ function twoSumOne(arr, target) {
     return null 
 }
 
-console.log(twoSumOne(two, 9));
+
+let twoSumSecond = (arr, target) => {
+    let hash = new Map() 
+
+    for (let i = 0; i < arr.length; i++) {
+        let complement = target - arr[i]
+
+        if (hash.get(complement) !== undefined) {
+            return [hash.get(complement), i]
+        }
+        hash.set(arr[i], i)
+    }
+    return []
+}
