@@ -109,3 +109,32 @@ let same = (ar1, ar2) => {
     return true
 }
 
+// ValidAnagram
+function validAnagram(first, second) {
+    
+    if (first.length !== second.length) {
+        return false
+    }
+
+    const lookUp = {}
+
+    for (let i= 0; i < first.length; i++) {
+        let letter = first[i]
+
+        lookUp[letter] ? lookUp[letter] += 1 : lookUp[letter] = 1 
+    }
+
+    for (let j = 0; j < second.length; j++) {
+        let letter = second[j]
+
+        if (!lookUp[letter]) {
+            return false
+        }
+        else {
+            lookUp[letter] -= 1 
+        }
+    }
+    return true
+}
+
+
